@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student & Library Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/4e5b7d0f4b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        🎓 LMS Portal
+    </div>
+
+    <nav>
+
+        <a href="#home">Home</a>
+        <a href="#students">Students</a>
+        <a href="#library">Library</a>
+
+    </nav>
+
+</header>
+
+<!-- Home -->
+
+<section id="home" class="hero">
+
+<h1>Student Learning & Library Management System</h1>
+
+<p>
+Modern responsive web application converted from your C++ project.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h2>Students</h2>
+<p>Add, Search, Update and Delete Students.</p>
+</div>
+
+<div class="card">
+<h2>Library</h2>
+<p>Manage Books with Search and Update.</p>
+</div>
+
+<div class="card">
+<h2>Topper</h2>
+<p>Automatic Grade and Topper Calculation.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Student Section -->
+
+<section id="students">
+
+<h2>Student Management</h2>
+
+<form id="studentForm">
+
+<input
+type="text"
+id="name"
+placeholder="Student Name"
+required>
+
+<input
+type="number"
+id="roll"
+placeholder="Roll Number"
+required>
+
+<input
+type="number"
+id="age"
+placeholder="Age"
+required>
+
+<input
+type="text"
+id="department"
+placeholder="Department"
+required>
+
+<input
+type="number"
+id="attendance"
+placeholder="Attendance (%)"
+required>
+
+<input
+type="number"
+id="english"
+placeholder="English Marks"
+required>
+
+<input
+type="number"
+id="math"
+placeholder="Math Marks"
+required>
+
+<input
+type="number"
+id="computer"
+placeholder="Computer Marks"
+required>
+
+<input
+type="number"
+id="physics"
+placeholder="Physics Marks"
+required>
+
+<button type="submit">
+
+Add Student
+
+</button>
+
+</form>
+
+<h3>Search Student</h3>
+
+<input
+type="number"
+id="searchRoll"
+placeholder="Enter Roll Number">
+
+<button onclick="searchStudent()">
+
+Search
+
+</button>
+
+<div id="studentResult"></div>
+
+<h3>Student Records</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+<th>Roll</th>
+<th>Age</th>
+<th>Department</th>
+<th>Attendance</th>
+<th>Grade</th>
+<th>Percentage</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="studentTable">
+
+</tbody>
+
+</table>
+
+<div class="topper">
+
+<h3>🏆 Topper</h3>
+
+<div id="topperCard">
+
+No Student Added
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Library -->
+
+<section id="library">
+
+<h2>Library Management</h2>
+
+<form id="bookForm">
+
+<input
+type="text"
+id="title"
+placeholder="Book Title"
+required>
+
+<input
+type="number"
+id="bookID"
+placeholder="Book ID"
+required>
+
+<input
+type="text"
+id="author"
+placeholder="Author"
+required>
+
+<input
+type="text"
+id="category"
+placeholder="Category"
+required>
+
+<input
+type="number"
+id="isbn"
+placeholder="ISBN"
+required>
+
+<button type="submit">
+
+Add Book
+
+</button>
+
+</form>
+
+<h3>Search Book</h3>
+
+<input
+type="number"
+id="searchBook"
+
+placeholder="Book ID">
+
+<button onclick="searchBook()">
+
+Search
+
+</button>
+
+<div id="bookResult"></div>
+
+<h3>Books Record</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Book ID</th>
+<th>Title</th>
+<th>Author</th>
+<th>Category</th>
+<th>ISBN</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="bookTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Student & Library Management System
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
